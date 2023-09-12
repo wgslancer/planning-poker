@@ -1,13 +1,22 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import { Button, UiProvider } from 'ui';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="planning-poker" />
-    </div>
+    <UiProvider>
+      <div
+        style={{
+          minHeight: '100vh',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '4px',
+        }}
+      >
+        <Button variant="primary">Primary Button</Button>
+        <Button variant="secondary">Secondary Button</Button>
+      </div>
+    </UiProvider>
   );
 }
 
